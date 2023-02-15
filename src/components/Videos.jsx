@@ -1,5 +1,5 @@
 import { Stack, Box } from "@mui/system"
-import { ChannelCard, VideoCard } from "./"
+import { ChannelCard, PlaylistCard, VideoCard } from "./"
 
 /*{videos.map((item, index) => (
   <Box key={index} >
@@ -16,10 +16,12 @@ const Videos = ({ videos }) => {
       
       {videoDataArray.map((videos, index) => {
           return [].concat(videos).map((item, itemIndex) => {
+            {console.log(item)}
             return(
               <Box key={itemIndex}>
                 {item.id.videoId && <VideoCard video={item} />}
                 {item.id.channelId && <ChannelCard channelDetail={item} />}
+                {item.id.playlistId && <PlaylistCard playlist={item}/>}
               </Box>
             )
          })
