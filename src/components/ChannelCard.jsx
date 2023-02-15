@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import fallbackImage from "../fallback.jpg";
 
 const ChannelCard = ({channelDetail:{id, snippet}}) => {
-  console.log(id, snippet);
   const { channelId } = id;
   const { thumbnails, title, } = snippet;
   return (
