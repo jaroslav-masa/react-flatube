@@ -9,7 +9,7 @@ const PlaylistCard = ( { playlist: {id, snippet}} ) => {
     return (
     <Card sx={{background: "#252525", ":hover": {background: "#333"}, borderRadius: 3}}>
         <Link to={`/playlist/${playlistId}`}>
-          <CardMedia component="img" height={thumbnails.medium.height} image={thumbnails.medium.url} draggable="false" alt={title} />
+          <CardMedia component="img" height={220} image={thumbnails.high.url} draggable="false" alt={title} />
           <CardContent sx={{height: 106, display: "flex", flexDirection: "column", justifyContent: "space-between", lineClamp: 2}}>
             <Typography gutterBottom variant="h6" component="h2" color="#fff">
               {title}
