@@ -11,7 +11,7 @@ import { GraphicEq } from "@mui/icons-material";
 import { TheaterComedy } from "@mui/icons-material";
 import { FitnessCenter } from "@mui/icons-material";
 
-import websiteLogo from "../Logo_Flatube.png";
+import websiteLogo from "../Logo_Light_Flatube.png";
 
 export const categories = [
     { name: "New", icon: <Home/> },
