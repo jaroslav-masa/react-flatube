@@ -2,6 +2,7 @@ import { Typography, Card, CardContent, CardMedia } from "@mui/material"
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { Box } from "@mui/system";
+import { CheckCircleRounded } from "@mui/icons-material";
 
 const VideoCard = ({ video: { id, snippet } }) => {
   const { videoId } = id;
@@ -46,7 +47,7 @@ const VideoCard = ({ video: { id, snippet } }) => {
           </Typography>
           <Box sx={{display: "flex", justifyContent: "space-between"}}>
             <Typography variant="body2" color="#999" component="p">
-              {wrappedChannelTitle}
+              {wrappedChannelTitle}&nbsp;<CheckCircleRounded sx={{fontSize: 14, translate: "0 15%", color: "rgb(120,120,120)"}}/>
             </Typography>
             <Typography variant="body2" color="#999" component="p" minWidth={75}>
               {timeDiff}

@@ -9,7 +9,7 @@ const Navbar = () => {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            sx={{ position: "sticky", background: "#000", top: 0}}
+            sx={{ position: "sticky", background: "rgb(10,10,10)", top: 0}}
         >
             <Link to="/" style={{display: "flex", alignItems: "center"}}>
                 <img src={logo} alt="logo" height={"45"} style={{ margin: "1rem"}}/>
