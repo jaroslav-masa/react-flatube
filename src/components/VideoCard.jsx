@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 const VideoCard = ({ video: { id, snippet } }) => {
   const { videoId } = id;
   const { thumbnails, title, channelTitle, publishTime } = snippet;
-  const wrappedTitle = title.length > 51 ? `${title.substring(0, 51 - 3)}...` : title;
+  const wrappedTitle = title.length > 53 ? `${title.substring(0, 47 - 3)}...` : title;
   const wrappedChannelTitle = channelTitle.length > 27 ? `${channelTitle.substring(0, 27 - 3)}...` : channelTitle;
 
   const [timeDiff, setTimeDiff] = useState("");
@@ -37,10 +37,10 @@ const VideoCard = ({ video: { id, snippet } }) => {
 
 
   return (
-    <Card sx={{ width: 312, background: "#252525", ":hover": {background: "#333"}, borderRadius: 3}}>
+    <Card sx={{background: "#252525", ":hover": {background: "#333"}, borderRadius: 3}}>
       <Link to={`/video/${videoId}`}>
-        <CardMedia component="img" height={thumbnails.medium.height} image={thumbnails.medium.url} draggable="false" alt={title} />
-        <CardContent sx={{height: 106, display: "flex", flexDirection: "column", justifyContent: "space-between", lineClamp: 2}}>
+        <CardMedia component="img" minHeight={thumbnails.medium.height} image={thumbnails.medium.url} draggable="false" alt={title} />
+        <CardContent sx={{height: 110, display: "flex", flexDirection: "column", justifyContent: "space-between", lineClamp: 2}}>
           <Typography gutterBottom variant="h6" component="h2" color="#fff">
             {wrappedTitle}
           </Typography>

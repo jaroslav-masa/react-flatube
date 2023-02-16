@@ -13,7 +13,7 @@ const VideoDetail = () => {
 
   return (
     <Box>
-
+      
     </Box>
   )
 }
